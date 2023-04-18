@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.home,
+.search,
+.aboutUs,
+.question {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.search {
+  background-image: url('../public/images/img-2s.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.aboutUs {
+  background-image: url('../public/images/img-1s.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.question {
+  background-image: url('../public/images/img-3s.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+/*https://br.freepik.com/fotos-gratis/feche-a-mao-fazendo-anotacoes_13819201.htm#query=estudar&position=1&from_view=keyword&track=sph
+https://br.freepik.com/fotos-gratis/menino-estudando-na-biblioteca-da-universidade_12296589.htm#query=estudar&position=3&from_view=keyword&track=sph
+https://br.freepik.com/fotos-gratis/conceito-de-educacao-estudante-estudando-e-brainstorming-conceito-de-campus-perto-de-estudantes-discutindo-seu-assunto-em-livros-ou-livros-didaticos-foco-seletivo_1239167.htm#query=estudar&position=4&from_view=keyword&track=sph
+*/

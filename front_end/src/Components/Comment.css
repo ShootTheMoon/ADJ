@@ -1,0 +1,52 @@
+.comment-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 4px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 3px;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.article-body {
+    box-sizing: border-box;
+    display: block;
+}
+
+.footer-comment {
+    box-sizing: border-box;
+    display: block;
+}
+
+.user-comment {
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+.user-name {
+    font-size: 15px;
+    line-height: 21px;
+    padding-left: 10px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+.span-comment {
+    box-sizing: border-box;
+}
+
+
+.comment-div {
+    font-family: Merriweather;
+    color: rgba(0, 0, 0, 0.84);
+    box-sizing: border-box;
+}
+
+.comment-text {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+

@@ -1,0 +1,23 @@
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar-input{
+    text-align: center;
+    height: 45px;
+    width: 350px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .searchbar input{
+        width: 250px;
+        height: 40px;
+    }
+    .search-input{
+        width: 270px;
+        height: 40px;
+    }
+}
