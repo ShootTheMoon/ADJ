@@ -1,13 +1,20 @@
 import React from 'react'
 import './AddQuestion.css'
+import Variables from './Variables'
 
 function AddQuestion() {
 
   const Upload= ()=>{
-    console.log(document.getElementById('Title').value)
-    console.log(document.getElementById('Question').value)
-    console.log(document.getElementById('Answer').value)
-    console.log(document.getElementById('Topic').value)
+
+    Variables.Questions.push({ 
+    id: Variables.Questions.length,
+    img: 'images/C-Sharp.png',
+    title:document.getElementById('Title').value,
+    label: document.getElementById('Topic').value,
+    Question: document.getElementById('Question').value,
+    answer: document.getElementById('Answer').value,
+    vote:0,
+    comments:[]},)
   }
 
 

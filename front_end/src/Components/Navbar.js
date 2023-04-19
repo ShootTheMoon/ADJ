@@ -7,7 +7,6 @@ import SearchBar from './SearchBar';
 import LoginPopUp from './LoginPopUp';
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose} from "react-icons/ai";
-import { AiOutlinePoweroff } from "react-icons/ai";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -64,11 +63,11 @@ function Navbar() {
                   </li>
                   <li>
                     <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                      <AiOutlinePoweroff/>
+                      Log Off
                     </Link>
                   </li>
                 </ul>
-                {button && <Link> <AiOutlinePoweroff color='#fff'/></Link>}
+                {button && <Link> Log Off</Link>}
             </div>
         </nav>
     </>

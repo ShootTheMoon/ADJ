@@ -7,8 +7,28 @@ import Search from './Components/Pages/Search.js';
 import Question from './Components/Pages/Question.js';
 import Browser from './Components/Pages/Browser.js';
 import Footer from './Components/Footer.js';
+import { useEffect, useState } from "react"
 
 function App() {
+
+  const [Questions, setQuestions] = useState([])
+
+  const fetchUserData = () => {
+    fetch()
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        setQuestions(data)
+      })
+  }
+
+  useEffect(() => {
+    fetchUserData()
+  }, [])
+
+
+
   return(
     <>
     <Router>
