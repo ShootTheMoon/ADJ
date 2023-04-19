@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import './LoginPopUp.css'
 import RegisterPopUp from './RegisterPopUp';
 import { AiOutlineClose} from "react-icons/ai";
+import Variables from './Variables';
 
 function LoginPopUp(props) {
 
@@ -14,7 +15,7 @@ function LoginPopUp(props) {
     const Email = document.getElementById('Email').value
     const Password = document.getElementById('Password').value
 
-    const check = false;
+    const check = Variables.isLoggedIn;
 
     if(check === true){
       props.logConfirm(true)

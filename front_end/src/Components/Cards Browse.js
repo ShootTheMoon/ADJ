@@ -3,10 +3,16 @@ import CardItem from './CardItem'
 import './Cards Browse.css';
 import { Button } from './Button'
 import Variables from './Variables'
+import { useEffect} from 'react';
 
 const options = Variables.Questions
 
 function CardsB() {
+
+    useEffect(() => {
+        
+    }, [])
+
 
     const addCards = () =>{
         var i=0

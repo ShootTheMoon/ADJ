@@ -7,6 +7,7 @@ import SearchBar from './SearchBar';
 import LoginPopUp from './LoginPopUp';
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose} from "react-icons/ai";
+import Variables from './Variables';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -67,7 +68,7 @@ function Navbar() {
                     </Link>
                   </li>
                 </ul>
-                {button && <Link> Log Off</Link>}
+                {button && <Button onclick={()=>{Variables.isLoggedIn = false}} buttonStyle='btn--outline'>Log Off</Button>}
             </div>
         </nav>
     </>

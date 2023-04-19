@@ -1,7 +1,8 @@
 
 const Variables = {
-    isLoggedIn: false,
-    Username: '',
+
+    isLoggedIn: true,
+    Username: 'Arthur',
     Questions: [
         { id: 0,img: 'images/C-Sharp.png',title:'Quick Sort Exercices',label: 'Data structures',Question:'Data structures',answer:'Data structures',vote:500,comments:[{User: 'Arthur',comment:'Cool'},{User: 'Daniel',comment:'Nice'}]},
         { id: 1,img: 'images/C-Sharp.png',title:'Quick Sort Exercices',label: 'React',Question:'React',answer:'React',vote:500,comments:[{User: 'Arthur',comment:'Cool'},{User: 'Daniel',comment:'Nice'}]},
