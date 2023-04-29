@@ -1,0 +1,17 @@
+{
+  "name": "backendworkfp",
+  "version": "1.0.0",
+  "description": "Built to establish connection between front and DB using back-end methods",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jayon Rodriguez",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.0",
+    "nodemon": "^2.0.22"
+  }
+}
