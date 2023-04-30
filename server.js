@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 
+const home = require('./routes/home')
 const AuthRoute = require('./routes/auth')
 const SearchRoute = require('./routes/searchAuth')
 
@@ -30,6 +31,6 @@ const Port = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log('Server is running on port ${PORT}')
 })
-
+app.use('./routes/home', home)
 app.use('./routes/auth', AuthRoute)
 app.use('./routes/searchAuth', SearchRoute)
