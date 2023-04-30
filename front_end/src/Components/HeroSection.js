@@ -12,7 +12,6 @@ function HeroSection() {
         <p>What are you waiting for?</p>
         <div className='hero-bts'>
             <Button to='/browser' className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>Get Started</Button>
-            <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>Watch Trailer</Button>
         </div>
     </div>
   )

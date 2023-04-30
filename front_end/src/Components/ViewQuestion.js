@@ -16,9 +16,9 @@ function ViewQuestion(props) {
 
     const AddComment = () =>{
 
-        const check = Variables.isLoggedIn;
+        const check = true;
         if(check === true){
-            setComArr([...comArr,{ User: Variables.Username, Comment: document.getElementById('comment').value}])
+            setComArr([...comArr,{ User: Variables.Username, comment: document.getElementById('comment').value}])
         }
         else{
             alert('You must do login before make a comment')

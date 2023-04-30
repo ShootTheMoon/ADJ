@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css';
-import './SearchBar';
-import SearchBar from './SearchBar';
 import LoginPopUp from './LoginPopUp';
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose} from "react-icons/ai";
@@ -12,7 +10,7 @@ import Variables from './Variables';
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(Variables.isLoggedIn);
   const handleClick= () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -44,7 +42,6 @@ function Navbar() {
                   {click ? <AiOutlineClose color='#fff'/>:<AiOutlineMenu color='#fff'/>}
                 </div>
                 <div className='search-bar'>
-                  <SearchBar></SearchBar>
                 </div>
                 <ul className={click ? 'nav-menu active': 'nav-menu'}>
                   <li className='nav-item'>
@@ -68,7 +65,7 @@ function Navbar() {
                     </Link>
                   </li>
                 </ul>
-                {button && <Button onclick={()=>{Variables.isLoggedIn = false}} buttonStyle='btn--outline'>Log Off</Button>}
+                {button && <Button onclick={()=>{setLogin(false)}} buttonStyle='btn--outline'>Log Off</Button>}
             </div>
         </nav>
     </>
@@ -87,7 +84,6 @@ function Navbar() {
                     {click ? <AiOutlineClose color='#fff'/>:<AiOutlineMenu color='#fff'/>}
                   </div>
                   <div className='search-bar'>
-                    <SearchBar></SearchBar>
                   </div>
                   <ul className={click ? 'nav-menu active': 'nav-menu'}>
                     <li className='nav-item'>

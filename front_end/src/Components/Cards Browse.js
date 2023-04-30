@@ -1,7 +1,6 @@
 import React from 'react'
 import CardItem from './CardItem'
 import './Cards Browse.css';
-import { Button } from './Button'
 import Variables from './Variables'
 import { useEffect} from 'react';
 
@@ -13,14 +12,6 @@ function CardsB() {
         
     }, [])
 
-
-    const addCards = () =>{
-        var i=0
-        while(i<4){
-            Variables.Questions.push({ id: 1})
-            i++
-        }
-    }
 
   return (
     <div className='cards'>
@@ -38,7 +29,6 @@ function CardsB() {
                     )
                 })}
             </div>
-            <Button onclick={addCards} className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>More questions</Button>
         </div>
     </div>
   )

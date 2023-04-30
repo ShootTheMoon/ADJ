@@ -15,7 +15,7 @@ function LoginPopUp(props) {
     const Email = document.getElementById('Email').value
     const Password = document.getElementById('Password').value
 
-    const check = Variables.isLoggedIn;
+    const check = true;
 
     if(check === true){
       props.logConfirm(true)
