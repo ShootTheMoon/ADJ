@@ -5,11 +5,13 @@ const showAll = (req, res, next) => {
     Search.find()
         .then(response => {
             res.json({
-                response
+                response,
+                 status: 'Accepted',
             })
         })
         .catch(error => {
             res.json({
+                status: 'error',
                 message: 'An error occurred!'
             })
         })
@@ -31,11 +33,13 @@ const create = (req, res, next) => {
         post.save()
             .then(post => {
                 res.json({
-                    message: 'user Added Successfully'
+                    status: 'Accepted',
+                    message: 'post Added Successfully'
                 })
             })
             .catch(error => {
                 res.json({
+                    status: 'error',
                     message: 'An error has occurred'
                 })
             })
@@ -57,11 +61,13 @@ const update = (req, res, next) => {
     Search.findByIDAndUpdate(postID, { $set: updateData })
         .then(() => {
             res.json({
-                message: "User updataed successfully!"
+                status: 'Accepted',
+                message: "User's post updataed successfully!"
             })
         })
         .catch(error => {
             res.json({
+                status: 'error',
                 message: 'Error occurred updating info'
             })
         })
@@ -73,12 +79,14 @@ const destroy = (req, res, next) => {
     Search.findOneANdRemove(postID)
         .then(() => {
             res.json({
-                message: 'User account has been deleted'
+                status: 'Accepted',
+                message: 'User post has been deleted'
             })
         })
         .catch(error => {
             res.json({
-                message: 'Error occurred deleting account'
+                status: 'error',
+                message: 'Error occurred deleting post'
             })
         })
 }

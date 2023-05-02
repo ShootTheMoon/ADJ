@@ -7,11 +7,14 @@ const showAll = (req, res, next) => {
     User.find()
         .then(response => {
             res.json({
+                status: 'Accepted',
+
                 response
                 })
         })
         .catch(error => {
             res.json({
+                status: 'error',
                 message: 'An error occurred!'
                 })
         })
@@ -25,19 +28,23 @@ const register = (req, res, next) => {
             res.json ({
                 error: err
             })
-            let user = new User({
+            let User = new User({
                 name: req.body.name,
                 username: req.body.username,
                 password: hashedPass
+
+
             })
-            user.save()
+            User.save()
                 .then(user => {
                     res.json({
+                        status: 'Accepted',
                         message: 'user Added Successfully'
                     })
                 })
                 .catch(error => {
                     res.json({
+                        status: 'error',
                         message: 'An error has occurred'
                     })
                 })
@@ -51,8 +58,8 @@ const login = (req, res, next) => {
     var password = req.body.password
 
     User.findOne({ $or: [{ name: username }, { username: username }] })
-        .then(user => {
-            if (user) {
+        .then(User => {
+            if (User) {
                 bcrypt.compare(password, user.password, function (err, result) {
                     if (err) {
                         res.json({
@@ -60,18 +67,20 @@ const login = (req, res, next) => {
                         })
                     }
                     if (result) {
-                        let token = jwt.sign({ username = user.username }, 'SecretFormula', { expiresIn: '10h' })
-                        let refreshtoken = jwt.sign({ username = user.username }, 'refreshTokenTime', { expiresIn: '81h' })
+                       // let token = jwt.sign({ username = user.username }, 'SecretFormula', { expiresIn: '10h' })
+                       // let refreshtoken = jwt.sign({ username = user.username }, 'refreshTokenTime', { expiresIn: '81h' })
                         res.status(200).json({
+                            status: 'Accepted',
                             message: 'Login Successful!',
-                            token,
-                            refreshtoken
+                          //  token,
+                           // refreshtoken
                         })
                     }
                 })
             }
             else {
                 res.status(200).json({
+                    status: 'error',
                     message: 'No user found'
                 })
             }
@@ -81,7 +90,8 @@ const login = (req, res, next) => {
 }
 
 //refresh token
-const refreshToken = (req, res, next) => {
+/*
+ const refreshToken = (req, res, next) => {
     const refreshToken = req.body.refreshToken
     jwt.verify(refreshToken, 'refreshTokenTime', function (err, decode) {
         if (err) {
@@ -101,6 +111,7 @@ const refreshToken = (req, res, next) => {
         }
     }
 )}
+*/
 
 //update user information
 const update = (req, res, next) => {
@@ -133,11 +144,13 @@ const destroy = (req, res, next) => {
     User.findOneANdRemove(userID)
         .then(() => {
             res.json({
+                status: 'Accepted',
                 message: 'User account has been deleted'
                 })
         })
         .catch(error => {
             res.json({
+                status: 'error',
                 message: 'Error occurred deleting account'
                 })
         })
@@ -147,7 +160,7 @@ module.exports = {
     showAll,
     register,
     login,
-    refreshToken,
+    //refreshToken,
     update,
     destroy
     }
