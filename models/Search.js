@@ -12,12 +12,12 @@ const searchSchema = new Schema({
 		type: String
 		},
 	upVote: {
-		type: int
+		type: String
 	},
 	downVote: {
-		type: int
+		type: String
 		}
 }, { timestamps: true })
 
-const User = mongoose.model('Search', searchSchema)
+const Search = mongoose.model('Search', searchSchema)
 module.exports = Search

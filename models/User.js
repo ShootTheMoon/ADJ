@@ -3,13 +3,16 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema({
 	Name: {
-		type: String
+		type: String,
+		unique: true
 	},
 	Username: {
-		type: String
+		type: String,
+		unique: true
 	},
 	Password: {
-		type: String
+		type: String,
+		unique: true
 		}
 }, { timestamps: true })
 
